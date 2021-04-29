@@ -38,4 +38,11 @@ data class Post(
         }
         return false
     }
+    fun canPin(): Boolean {
+        if (canPin != null) {
+            return true
+        }
+        return false
+    }
+
 }
