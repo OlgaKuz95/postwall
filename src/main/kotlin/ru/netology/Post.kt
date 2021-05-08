@@ -27,13 +27,6 @@ data class Post(
     val isFavorite: Boolean,
     val donut: Donut = Donut(),
     val postponedId: Int,
-    val original: Post?,
-) {
-
-    fun isRepost(): Boolean {
-        if (original != null) {
-            return true
-        }
-        return false
-    }
-}
+    val copyHistory: Post? = null,
+    val geo: Geo = Geo(),
+)

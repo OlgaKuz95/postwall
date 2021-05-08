@@ -9,6 +9,12 @@ object WallService {
 
     private var id = 0
 
+    fun addCopy(post: Post): Post {
+        val copy = post.copy(id = id++)
+        posts += copy
+        return copy
+    }
+
     fun add(post: Post): Post {
         posts += post.copy(id = id++)
         return posts.last()
@@ -23,6 +29,15 @@ object WallService {
         }
         return false
     }
+
+
+    fun isRepost(copyHistory: Post?): Boolean {
+        if (copyHistory != null) {
+            return true
+        }
+        return false
+    }
+
 
     val post = Post(
         0,
@@ -61,7 +76,10 @@ object WallService {
             paidDuration = 36,
         ),
         0,
-        null
+        null,
+        geo = Geo(
+            type = "plain"
+        )
     )
 
     val repost = Post(
@@ -101,7 +119,9 @@ object WallService {
             paidDuration = 36,
         ),
         0,
-        original = null
+        geo = Geo(
+            type = "plain"
+        )
     )
 }
 
