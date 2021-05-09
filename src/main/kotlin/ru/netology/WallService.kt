@@ -1,13 +1,17 @@
 package ru.netology.ru.netology
 
+import ru.netology.Comment
 import ru.netology.Post
+
 
 object WallService {
 
 
     private var posts = emptyArray<Post>()
+    private var comments = emptyArray<Comment>()
 
     private var id = 0
+
 
     fun addCopy(post: Post): Post {
         val copy = post.copy(id = id++)
@@ -36,6 +40,15 @@ object WallService {
             return true
         }
         return false
+    }
+
+    fun createComment(comment: Comment) {
+        try {
+            val id = comment.postId
+            println("$comment.add")
+        } catch (e: PostNotFoundException) {
+            println("PostNotFound")
+        }
     }
 
 
@@ -122,6 +135,17 @@ object WallService {
         geo = Geo(
             type = "plain"
         )
+    )
+
+    val comment = Comment(
+        0,
+        0,
+        1,
+        "text",
+        2,
+        null,
+        2,
+        2
     )
 }
 
