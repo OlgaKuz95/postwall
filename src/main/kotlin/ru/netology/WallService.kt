@@ -42,14 +42,14 @@ object WallService {
         return false
     }
 
-    fun createComment(comment: Comment) {
+    /*fun createComment(comment: Comment) {
         try {
             val id = comment.postId
             println("$comment.add")
         } catch (e: PostNotFoundException) {
             println("PostNotFound")
         }
-    }
+    }*/
 
 
     val post = Post(
