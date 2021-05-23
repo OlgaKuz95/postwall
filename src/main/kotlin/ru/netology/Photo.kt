@@ -7,4 +7,4 @@ data class Photo(
     val ownerId: Int,
     val userId: Int,
     val text: String,
-) : Attachments
+) : Attachment

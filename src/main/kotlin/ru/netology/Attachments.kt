@@ -1,5 +1,5 @@
 package ru.netology
 
-interface Attachments{
-    abstract val type: String
+interface Attachment{
+     val type: String
 }

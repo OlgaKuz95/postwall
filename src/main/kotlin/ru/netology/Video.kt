@@ -8,4 +8,4 @@ data class Video(
     val description:String,
     val duration:Int,
     )
-    : Attachments
+    : Attachment

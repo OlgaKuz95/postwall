@@ -6,4 +6,4 @@ data class Postedphoto(
     val ownerId: Int,
     val photo130: String,
     val photo604: String
-) : Attachments
+) : Attachment

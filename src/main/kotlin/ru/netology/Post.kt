@@ -29,4 +29,8 @@ data class Post(
     val postponedId: Int,
     val copyHistory: Post? = null,
     val geo: Geo = Geo(),
+    val album: Album = Album(),
+
+
+
 )

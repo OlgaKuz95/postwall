@@ -7,4 +7,4 @@ data class Doc(
     val title: String,
     val size: Int,
     val ext: String,
-) : Attachments
+) : Attachment
