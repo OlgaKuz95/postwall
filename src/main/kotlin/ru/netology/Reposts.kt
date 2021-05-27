@@ -1,4 +1,4 @@
-package ru.netology.ru.netology
+package ru.netology
 
 data class Reposts(
     val count: Int = 0,

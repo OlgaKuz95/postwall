@@ -1,11 +1,9 @@
-package ru.netology.ru.netology
+package ru.netology
 
-import ru.netology.Comment
-import ru.netology.Post
+import ru.netology.ru.netology.PostNotFoundException
 
 
 object WallService {
-
 
     private var posts = emptyArray<Post>()
     private var comments = emptyArray<Comment>()
@@ -42,14 +40,14 @@ object WallService {
         return false
     }
 
-    /*fun createComment(comment: Comment) {
+    fun createComment(comment: Comment) {
         try {
             val id = comment.postId
             println("$comment.add")
         } catch (e: PostNotFoundException) {
             println("PostNotFound")
         }
-    }*/
+    }
 
 
     val post = Post(

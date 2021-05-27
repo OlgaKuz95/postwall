@@ -3,6 +3,7 @@ package ru.netology
 import org.junit.Test
 
 import org.junit.Assert.*
+import ru.netology.WallService.comment
 import ru.netology.ru.netology.*
 
 class WallServiceTest {
@@ -145,4 +146,27 @@ class WallServiceTest {
         assertTrue(result)
     }
 
+    /*@Test(expected = PostNotFoundException::class)
+    fun createComment() {
+        val service = WallService
+        try {
+            val id = comment.postId
+            println("$comment.add")
+        } catch (e: PostNotFoundException) {
+            println("PostNotFound")
+        }
+
+    }
+
+    val message = PostNotFoundException()
+    AssertionError(message: String?)
+    private fun PostNotFoundException(): Boolean = throw RuntimeException()*/
+
+
 }
+
+
+
+
+
+

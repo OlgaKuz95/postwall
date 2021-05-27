@@ -1,7 +1,5 @@
 package ru.netology
 
-import ru.netology.ru.netology.*
-
 data class Post(
     val id: Int,
     val ownerId: Int,
@@ -29,8 +27,5 @@ data class Post(
     val postponedId: Int,
     val copyHistory: Post? = null,
     val geo: Geo = Geo(),
-    val album: Album = Album(),
-
-
-
+    val attachment: List<Attachment> = emptyList(),
 )
