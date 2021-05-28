@@ -3,6 +3,7 @@ package ru.netology
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
+import ru.netology.WallService.comment
 import ru.netology.ru.netology.PostNotFoundException
 
 class WallServiceTest {
@@ -148,7 +149,7 @@ class WallServiceTest {
     @Test(expected = PostNotFoundException::class)
 
 
-    fun createComment(comment: Comment) {
+    fun createComment() {
         val ownerId = 0
         val postId = 0
         val fromGroup = 1
