@@ -4,6 +4,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import ru.netology.WallService.comment
+import ru.netology.WallService.post
 import ru.netology.ru.netology.PostNotFoundException
 
 class WallServiceTest {
@@ -159,11 +160,6 @@ class WallServiceTest {
         val stickerId = 2
         val guid = 2
 
-        if(  WallService.id == comment.postId) {
-            println("$comment.add")
-        } else (throw PostNotFoundException())
-
-
         val result = Comment(
             ownerId = ownerId,
             postId = postId,
@@ -173,6 +169,7 @@ class WallServiceTest {
             parentsStack = parentsStack,
             stickerId = stickerId,
             guid = guid
+
         )
         val expected = PostNotFoundException::class
         assertEquals(expected, result)
