@@ -8,10 +8,10 @@ import ru.netology.WallService.post
 import ru.netology.ru.netology.PostNotFoundException
 
 class WallServiceTest {
+    val service = WallService
 
     @Test
     fun update() {
-        val service = WallService
         service.add(
             Post(
                 0,
@@ -151,26 +151,70 @@ class WallServiceTest {
 
 
     fun createComment() {
-        val ownerId = 0
+      val createComment = Comment(
+          0,
+          0,
+          1,
+          "Text",
+          2,
+      null,
+          2,
+          2
+      )
+        service.add (Post(
+            0,
+            0,
+            0,
+            1,
+            "12.10.20",
+            "text",
+            1,
+            1,
+            true,
+            comments = Comments(
+                count = 0,
+            ),
+            copyright = Copyright(
+                id = 0,
+            ),
+            likes = Likes(
+                count = 0,
+            ),
+            reposts = Reposts(
+                count = 0,
+            ),
+            views = Views(
+                count = 0,
+            ),
+            "post",
+            1,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            donut = Donut(
+                paidDuration = 36,
+            ),
+            0,
+            null,
+            geo = Geo(
+                type = "plain"
+            )
+        ))
+
+
+        /*val ownerId = 0
         val postId = 0
         val fromGroup = 1
         val message = "Text"
         val replyTocomment = 2
         val parentsStack: Comment? = null
         val stickerId = 2
-        val guid = 2
+        val guid = 2*/
 
-        val result = Comment(
-            ownerId = ownerId,
-            postId = postId,
-            fromGroup = fromGroup,
-            message = message,
-            replyTocomment = replyTocomment,
-            parentsStack = parentsStack,
-            stickerId = stickerId,
-            guid = guid
-
-        )
+        val result = service.createComment(createComment)
         val expected = PostNotFoundException::class
         assertEquals(expected, result)
     }
