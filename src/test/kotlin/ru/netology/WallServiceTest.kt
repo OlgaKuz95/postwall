@@ -157,7 +157,6 @@ class WallServiceTest {
         val parentsStack: Comment? = null
         val stickerId = 2
         val guid = 2
-        val id = 1
 
         if(  WallService.id == comment.postId) {
             println("$comment.add")
