@@ -1,10 +1,9 @@
 package ru.netology
 
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Test
-
-import org.junit.Assert.*
-import ru.netology.WallService.comment
-import ru.netology.ru.netology.*
+import ru.netology.ru.netology.PostNotFoundException
 
 class WallServiceTest {
 
@@ -146,21 +145,38 @@ class WallServiceTest {
         assertTrue(result)
     }
 
-    /*@Test(expected = PostNotFoundException::class)
-    fun createComment() {
-        val service = WallService
-        try {
-            val id = comment.postId
+    @Test(expected = PostNotFoundException::class)
+
+
+    fun createComment(comment: Comment) {
+        val ownerId = 0
+        val postId = 0
+        val fromGroup = 1
+        val message = "Text"
+        val replyTocomment = 2
+        val parentsStack: Comment? = null
+        val stickerId = 2
+        val guid = 2
+        val id = 1
+
+        if(  WallService.id == comment.postId) {
             println("$comment.add")
-        } catch (e: PostNotFoundException) {
-            println("PostNotFound")
-        }
+        } else (throw PostNotFoundException())
 
+
+        val result = Comment(
+            ownerId = ownerId,
+            postId = postId,
+            fromGroup = fromGroup,
+            message = message,
+            replyTocomment = replyTocomment,
+            parentsStack = parentsStack,
+            stickerId = stickerId,
+            guid = guid
+        )
+        val expected = PostNotFoundException::class
+        assertEquals(expected, result)
     }
-
-    val message = PostNotFoundException()
-    AssertionError(message: String?)
-    private fun PostNotFoundException(): Boolean = throw RuntimeException()*/
 
 
 }

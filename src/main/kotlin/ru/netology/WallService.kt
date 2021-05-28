@@ -8,7 +8,7 @@ object WallService {
     private var posts = emptyArray<Post>()
     private var comments = emptyArray<Comment>()
 
-    private var id = 0
+    var id = 0
 
 
     fun addCopy(post: Post): Post {
@@ -41,12 +41,9 @@ object WallService {
     }
 
     fun createComment(comment: Comment) {
-        try {
-            val id = comment.postId
-            println("$comment.add")
-        } catch (e: PostNotFoundException) {
-            println("PostNotFound")
-        }
+        if(  id == comment.postId) {
+           println("$comment.add")
+        } else (throw PostNotFoundException())
     }
 
 
