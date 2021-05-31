@@ -153,7 +153,7 @@ class WallServiceTest {
     fun createComment() {
       val createComment = Comment(
           0,
-          0,
+          1,
           1,
           "Text",
           2,
@@ -205,18 +205,8 @@ class WallServiceTest {
         ))
 
 
-        /*val ownerId = 0
-        val postId = 0
-        val fromGroup = 1
-        val message = "Text"
-        val replyTocomment = 2
-        val parentsStack: Comment? = null
-        val stickerId = 2
-        val guid = 2*/
+        service.createComment(createComment)
 
-        val result = service.createComment(createComment)
-        val expected = PostNotFoundException::class
-        assertEquals(expected, result)
     }
 
 

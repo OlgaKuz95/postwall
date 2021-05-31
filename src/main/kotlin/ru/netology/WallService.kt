@@ -42,7 +42,7 @@ object WallService {
 
     fun createComment(comment: Comment) {
         if(  id == comment.postId) {
-           println("$comment.add")
+          println ("$comments.add")
         } else (throw PostNotFoundException())
     }
 
@@ -142,6 +142,7 @@ object WallService {
         2,
         2
     )
+
 }
 
 
