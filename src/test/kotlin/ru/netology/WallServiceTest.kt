@@ -153,7 +153,7 @@ class WallServiceTest {
     fun createComment() {
       val createComment = Comment(
           0,
-          1,
+          0,
           1,
           "Text",
           2,
