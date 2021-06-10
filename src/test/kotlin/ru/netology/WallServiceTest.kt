@@ -1,10 +1,7 @@
 package ru.netology
 
-import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
-import ru.netology.WallService.comment
-import ru.netology.WallService.post
 import ru.netology.ru.netology.PostNotFoundException
 
 class WallServiceTest {
@@ -161,6 +158,7 @@ class WallServiceTest {
           2,
           2
       )
+
         service.add (Post(
             0,
             0,
@@ -206,10 +204,7 @@ class WallServiceTest {
 
 
         service.createComment(createComment)
-
     }
-
-
 }
 
 
