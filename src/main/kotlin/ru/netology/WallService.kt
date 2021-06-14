@@ -10,7 +10,6 @@ object WallService {
     private var comments = emptyArray<Comment>()
 
     var id = 0
-    var postId = 0
 
     fun addCopy(post: Post): Post {
         val copy = post.copy(id = id++)
