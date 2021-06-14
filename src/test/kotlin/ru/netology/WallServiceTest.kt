@@ -160,7 +160,7 @@ class WallServiceTest {
       )
 
         service.add (Post(
-            1,
+            0,
             0,
             0,
             1,

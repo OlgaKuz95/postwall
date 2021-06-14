@@ -47,7 +47,7 @@ object WallService {
             comments += comment
             println("$id")
         } else {
-            throw PostNotFoundException("")
+            (throw PostNotFoundException(""))
         }
     }
 
