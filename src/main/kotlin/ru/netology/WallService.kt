@@ -43,7 +43,7 @@ object WallService {
 
     fun createComment(comment: Comment) {
 
-        if (posts.any { comment.postId == it.id }) {
+        if (posts.any { comment.postId == id }) {
             comments += comment
             println("$id")
         } else {
