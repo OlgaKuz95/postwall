@@ -43,107 +43,109 @@ object WallService {
 
     fun createComment(comment: Comment) {
 
-        if (posts.any { postId == id })
-            { comments += comment
-        println("$id")
-    } else {(throw PostNotFoundException  (""))}
-}
+        if (posts.any { comment.postId == it.id }) {
+            comments += comment
+            println("$id")
+        } else {
+            throw PostNotFoundException("")
+        }
+    }
 
-val comment = Comment(
-    0,
-    0,
-    1,
-    "text",
-    2,
-    null,
-    2,
-    2
-)
-
-val post = Post(
-    0,
-    0,
-    0,
-    1,
-    "12.10.20",
-    "text",
-    1,
-    1,
-    true,
-    comments = Comments(
-        count = 0,
-    ),
-    copyright = Copyright(
-        id = 0,
-    ),
-    likes = Likes(
-        count = 0,
-    ),
-    reposts = Reposts(
-        count = 0,
-    ),
-    views = Views(
-        count = 0,
-    ),
-    "post",
-    1,
-    false,
-    false,
-    false,
-    true,
-    false,
-    false,
-    donut = Donut(
-        paidDuration = 36,
-    ),
-    0,
-    null,
-    geo = Geo(
-        type = "plain"
+    val comment = Comment(
+        0,
+        0,
+        1,
+        "text",
+        2,
+        null,
+        2,
+        2
     )
-)
 
-val repost = Post(
-    0,
-    0,
-    0,
-    1,
-    "12.10.20",
-    "text",
-    1,
-    1,
-    true,
-    comments = Comments(
-        count = 2,
-    ),
-    copyright = Copyright(
-        id = 0,
-    ),
-    likes = Likes(
-        count = 0,
-    ),
-    reposts = Reposts(
-        count = 0,
-    ),
-    views = Views(
-        count = 0,
-    ),
-    "post",
-    1,
-    false,
-    false,
-    false,
-    true,
-    false,
-    false,
-    donut = Donut(
-        paidDuration = 36,
-    ),
-    0,
-    geo = Geo(
-        type = "plain"
+    val post = Post(
+        0,
+        0,
+        0,
+        1,
+        "12.10.20",
+        "text",
+        1,
+        1,
+        true,
+        comments = Comments(
+            count = 0,
+        ),
+        copyright = Copyright(
+            id = 0,
+        ),
+        likes = Likes(
+            count = 0,
+        ),
+        reposts = Reposts(
+            count = 0,
+        ),
+        views = Views(
+            count = 0,
+        ),
+        "post",
+        1,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        donut = Donut(
+            paidDuration = 36,
+        ),
+        0,
+        null,
+        geo = Geo(
+            type = "plain"
+        )
     )
-)
+
+    val repost = Post(
+        0,
+        0,
+        0,
+        1,
+        "12.10.20",
+        "text",
+        1,
+        1,
+        true,
+        comments = Comments(
+            count = 2,
+        ),
+        copyright = Copyright(
+            id = 0,
+        ),
+        likes = Likes(
+            count = 0,
+        ),
+        reposts = Reposts(
+            count = 0,
+        ),
+        views = Views(
+            count = 0,
+        ),
+        "post",
+        1,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        donut = Donut(
+            paidDuration = 36,
+        ),
+        0,
+        geo = Geo(
+            type = "plain"
+        )
+    )
 
 
 }
