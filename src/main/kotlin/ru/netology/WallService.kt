@@ -42,14 +42,15 @@ object WallService {
     }
 
     fun createComment(comment: Comment) {
-
-        if (posts.any { comment.postId == id }) {
+        if (posts.any { comment.postId == it.id }) {
             comments += comment
             println("$id")
         } else {
-            (throw PostNotFoundException(""))
+            throw PostNotFoundException("")
         }
     }
+
+
 
     val comment = Comment(
         0,
