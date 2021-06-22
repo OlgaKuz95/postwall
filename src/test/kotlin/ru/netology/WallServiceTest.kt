@@ -149,7 +149,7 @@ class WallServiceTest {
     fun createComment_PostNotFoundException() {
         val createComment = Comment(
             0,
-            0,
+            100,
             1,
             "Text",
             2,
@@ -202,71 +202,71 @@ class WallServiceTest {
                 )
             )
         )
-        val result = service.createComment(createComment)
-        assertEquals(createComment, result)    }
+        service.createComment(createComment)
+    }
 
-    @Test
-    fun createCommentExistentPost_commentReturned() {
-        val createComment = Comment(
-            ownerId = 0,
-            postId = 0,
-            fromGroup = 1,
-            message = "Text",
-            replyTocomment = 2,
-            parentsStack = null,
-            stickerId = 2,
-            guid = 2
-        )
-
-        service.add(
-            Post(
-                id = 0,
+        @Test
+        fun createCommentExistentPost_commentReturned() {
+            val createComment = Comment(
                 ownerId = 0,
-                fromId = 0,
-                createdBy = 1,
-                date = "12.10.20",
-                text = "text",
-                replyOwnerid = 1,
-                replyPostid = 1,
-                friendsOnly = true,
-                comments = Comments(
-                    count = 0,
-                ),
-                copyright = Copyright(
+                postId = 0,
+                fromGroup = 1,
+                message = "Text",
+                replyTocomment = 2,
+                parentsStack = null,
+                stickerId = 2,
+                guid = 2
+            )
+
+            service.add(
+                Post(
                     id = 0,
-                ),
-                likes = Likes(
-                    count = 0,
-                ),
-                reposts = Reposts(
-                    count = 0,
-                ),
-                views = Views(
-                    count = 0,
-                ),
-                postType = "post",
-                signerId = 1,
-                canPin = false,
-                canDelete = false,
-                canEdit = false,
-                isPinned = true,
-                markedAsads = false,
-                isFavorite = false,
-                donut = Donut(
-                    paidDuration = 36,
-                ),
-                postponedId = 0,
-                copyHistory = null,
-                geo = Geo(
-                    type = "plain"
+                    ownerId = 0,
+                    fromId = 0,
+                    createdBy = 1,
+                    date = "12.10.20",
+                    text = "text",
+                    replyOwnerid = 1,
+                    replyPostid = 1,
+                    friendsOnly = true,
+                    comments = Comments(
+                        count = 0,
+                    ),
+                    copyright = Copyright(
+                        id = 0,
+                    ),
+                    likes = Likes(
+                        count = 0,
+                    ),
+                    reposts = Reposts(
+                        count = 0,
+                    ),
+                    views = Views(
+                        count = 0,
+                    ),
+                    postType = "post",
+                    signerId = 1,
+                    canPin = false,
+                    canDelete = false,
+                    canEdit = false,
+                    isPinned = true,
+                    markedAsads = false,
+                    isFavorite = false,
+                    donut = Donut(
+                        paidDuration = 36,
+                    ),
+                    postponedId = 0,
+                    copyHistory = null,
+                    geo = Geo(
+                        type = "plain"
+                    )
                 )
             )
-        )
 
 
-        val result = service.createComment(createComment)
-        assertEquals(createComment, result)
-    }
+            val result = service.createComment(createComment)
+            assertEquals(createComment, result)
+        }
 }
 
 
