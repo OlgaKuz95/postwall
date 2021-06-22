@@ -202,8 +202,8 @@ class WallServiceTest {
                 )
             )
         )
-       service.createComment(createComment)
-    }
+        val result = service.createComment(createComment)
+        assertEquals(createComment, result)    }
 
     @Test
     fun createCommentExistentPost_commentReturned() {
