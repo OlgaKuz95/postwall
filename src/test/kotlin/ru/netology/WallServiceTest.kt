@@ -209,7 +209,7 @@ class WallServiceTest {
     fun createCommentExistentPost_commentReturned() {
         val createComment = Comment(
             ownerId = 0,
-            postId = 1,
+            postId = 0,
             fromGroup = 1,
             message = "Text",
             replyTocomment = 2,
@@ -220,7 +220,7 @@ class WallServiceTest {
 
         service.add(
             Post(
-                id = 1,
+                id = 0,
                 ownerId = 0,
                 fromId = 0,
                 createdBy = 1,
