@@ -202,7 +202,7 @@ class WallServiceTest {
                 )
             )
         )
-        val result = service.createComment(createComment)
+       service.createComment(createComment)
     }
 
     @Test
